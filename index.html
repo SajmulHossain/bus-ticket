@@ -1,11 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bus Ticket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            main: 'rgb(29, 209, 0)',
+            bgMain: 'rgba(29, 209, 0, 0.1)',
+            borderMain: 'rgba(29, 209, 0, 0.4)',
+            card1: 'rgb(255, 191, 15)',
+            card2: 'rgb(247, 140, 156)'
+          },
+          fontFamily: {
+            raleway: 'Raleway',
+          },
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  sdf
+<body class="font-raleway">
+  <header>
+    <nav class="grid grid-cols-12 grid-rows-2 lg:flex justify-between py-5 px-4 lg:px-0 items-center max-w-screen-xl m-auto">
+      <h3 class="col-start-1 col-span-4 font-extrabold text-2xl lg:text-4xl">P-Ticket</h3>
+      <ul class="flex gap-3 row-start-2 row-span-1 col-span-full justify-between font-medium text-[18px] lg:gap-14">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Destination</a></li>
+        <li><a href="">Search</a></li>
+      </ul>
+      <div class="col-start-8 col-span-5 border flex gap-2 py-4 px-8 bg-bgMain border-borderMain items-center justify-center rounded-xl text-main font-bold text-xl">
+        <p>Bus</p>
+        <p>
+          <img class="w-full" src="images/bus-icon.png" alt="this is a bus logo">
+        </p>
+      </div>
+    </nav>
+  </header>
+
+  <main class="">
+    <section class="max-w-screen-xl mx-auto px-4 lg:px-0 relative bg-[url('images/banner.png')] bg-cover bg-center py-12 lg:py-24 lg:pb-52 rounded-3xl lg:rounded-[32px] -z-50">
+      <h1 class="text-center font-extrabold text-white flex flex-col text-3xl lg:text-6xl">
+        <span>End-to-End Travel with</span>
+        <span class="text-main">P Paribahan</span>
+      </h1>
+
+      <p class="text-white text-center mt-4 lg:w-2/4 m-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+
+      <div class="text-center mt-8">
+        <button class="btn bg-main border-none text-black">Buy Ticket</button>
+      </div>
+
+      <div class="hidden lg:flex w-full justify-evenly m-auto absolute -bottom-20  z-50">
+        <div class="flex items-center gap-3 rounded-3xl border-b-4 border-main p-8 bg-white">
+          <div>
+            <img src="images/people.png" alt="this is a logo of people">
+          </div>
+          <div>
+            <h3 class="text-4xl font-bold">500K+</h3>
+            <p>Registered Users</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 rounded-3xl border-b-4 border-main p-8 bg-white">
+          <div>
+            <img src="images/ticket-cupon.png" alt="this is a logo of people">
+          </div>
+          <div>
+            <h3 class="text-4xl font-bold">1.7 Lacks</h3>
+            <p>Ticket Sold</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 rounded-3xl border-b-4 border-main p-8 bg-white">
+          <div>
+            <img src="images/stoppage.png" alt="this is a logo of people">
+          </div>
+          <div>
+            <h3 class="text-4xl font-bold">800K+</h3>
+            <p>Rental Partners</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-screen-xl mx-auto px-4 lg:px-0 mt-12 lg:mt-36">
+      <h2 class="text-center">Best offers for you</h2>
+
+      <div class="mt-6 lg:mt-8 flex flex-col lg:flex-row gap-5 lg:justify-center">
+        <div class="flex items-center justify-between bg-card1 px-6 rounded-2xl">
+          <div class="flex flex-col gap-2">
+            <h3 class="font-extrabold text-3xl">15% OFF</h3>
+            <h5 class="font-bold">on your next purchase</h5>
+            <p>used by January 2024</p>
+          </div>
+          <div>
+            <img src="images/info-devider.png" class="h-44" alt="this is a devider">
+          </div>
+          <div>
+            <h4 class="text-2xl font-bold">NEW15</h4>
+            <p>Coupon Code</p>
+          </div>
+        </div>
+        <div class="flex items-center justify-between bg-card2 px-6 rounded-2xl">
+          <div class="flex flex-col gap-2">
+            <h3 class="font-extrabold text-3xl">20% OFF</h3>
+            <h5 class="font-bold">on your next purchase</h5>
+            <p>used by January 2024</p>
+          </div>
+          <div>
+            <img src="images/info-devider.png" class="h-44" alt="this is a devider">
+          </div>
+          <div>
+            <h4 class="text-2xl font-bold">Couple20</h4>
+            <p>Coupon Code</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-6 lg:mt-12">
+        <button class="btn border border-main text-main bg-transparent">See All Offers</button>
+      </div>
+    </section>
+
+    <section class="border-t-2 border-main rounded-3xl bg-[rgb(247, 248, 248)] mt-12 lg:mt-28 py-16 lg:py-28">
+     <div class="max-w-screen-xl mx-auto px-4 lg:px-0">
+      <div class="text-center flex flex-col gap-4 lg:gap-6">
+        <h3 class="font-bold text-2xl">P.H Paribahan</h3>
+        <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+      </div>
+
+      
+     </div>
+    </section>
+  </main>
 </body>
 </html>
