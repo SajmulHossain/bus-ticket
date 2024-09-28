@@ -16,6 +16,7 @@
           colors: {
             main: 'rgb(29, 209, 0)',
             bgMain: 'rgba(29, 209, 0, 0.1)',
+            bg1: 'rgb(247, 248, 248)',
             borderMain: 'rgba(29, 209, 0, 0.4)',
             card1: 'rgb(255, 191, 15)',
             card2: 'rgb(247, 140, 156)'
@@ -92,7 +93,7 @@
     </section>
 
     <section class="max-w-screen-xl mx-auto px-4 lg:px-0 mt-12 lg:mt-36">
-      <h2 class="text-center">Best offers for you</h2>
+      <h2 class="text-center font-bold text-2xl">Best offers for you</h2>
 
       <div class="mt-6 lg:mt-8 flex flex-col lg:flex-row gap-5 lg:justify-center">
         <div class="flex items-center justify-between bg-card1 px-6 rounded-2xl">
@@ -130,14 +131,81 @@
       </div>
     </section>
 
-    <section class="border-t-2 border-main rounded-3xl bg-[rgb(247, 248, 248)] mt-12 lg:mt-28 py-16 lg:py-28">
+    <section class="border-t-2 border-main rounded-3xl bg-bg1 mt-12 lg:mt-28 py-16 lg:py-28">
      <div class="max-w-screen-xl mx-auto px-4 lg:px-0">
       <div class="text-center flex flex-col gap-4 lg:gap-6">
         <h3 class="font-bold text-2xl">P.H Paribahan</h3>
-        <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+        <p class="lg:w-1/2 m-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
       </div>
 
-      
+      <div class="bg-white rounded-3xl mt-12 p-4 lg:p-0 lg:px-6 lg:flex justify-between items-center">
+        <!-- main div -->
+     
+          <!-- first div -->
+          <div class="w-3/4">
+            <!-- child div header start -->
+            <div class="flex flex-col lg:flex-row gap-4 mb-4 lg:justify-between">
+              <div class="flex gap-3 items-center">
+                <div>
+                  <img src="images/bus-logo.png" alt="this is a bus logo">
+                </div>
+                <div>
+                  <h2 class="font-bold text-xl lg:text-3xl">Greenline Paribahan</h2>
+                  <p>Coach-009-WEB | AC_Business</p>
+                </div>
+              </div>
+
+              <div class="flex gap-3 items-center font-bold text-main bg-bgMain w-fit rounded-xl p-4">
+                <div>
+                  <img src="images/seat-green.png" alt="this is a seat images">
+                </div>
+                <div>
+                  <p><span>40 </span>Seats left</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- rount div open -->
+             <div class="bg-bg1 rounded-3xl p-4 lg:p-6 mt-6 lg:mt-0">
+              <div class="border-b-2 border-dashed flex justify-between pb-3">
+                <p>Route</p>
+                <p>Dhaka-Sylhet</p>
+              </div>
+              <div class="border-b-2 border-dashed flex justify-between py-3">
+                <p>Departure Time</p>
+                <p>9:00</p>
+              </div>
+              <div class="flex flex-col lg:flex-row gap-5 pt-4">
+                <div class="bg-gray-300 py-3 px-3 rounded-xl lg:rounded-2xl text-center lg:w-fit">
+                  <p class="font-bold">Boarding Point-Laximput</p>
+                </div>
+                <div class="bg-gray-300 py-3 px-3 rounded-xl lg:rounded-2xl text-center lg:w-fit">
+                  <p class="font-bold">Dropping Point-Bagura</p>
+                </div>
+                <div class="bg-gray-300 py-3 px-3 rounded-xl lg:rounded-2xl text-center lg:w-fit">
+                  <p class="font-bold">Est.Time - 11 Hour</p>
+                </div>
+              </div>
+             </div>
+            <!-- rount div end -->
+        </div>
+
+        <!-- 2nd div for divider image -->
+         <div class="hidden lg:block">
+          <img src="images/info-devider.png" class="h-[340px]" alt="divider image">
+         </div>
+
+         <!-- 3rd div -->
+          <div class="flex flex-col gap-3 items-center mt-6 lg:mt-0 w-1/6">
+            <div>
+              <img src="images/fare.png" alt="this is a image of taka">
+            </div>
+            <div class="text-center">
+              <h3 class="font-bold text-2xl">550 Taka</h3>
+            <p class="font-medium">Per Seat</p>
+            </div>
+          </div>
+
      </div>
     </section>
   </main>
