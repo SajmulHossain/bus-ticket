@@ -162,7 +162,7 @@
                   <img src="images/seat-green.png" alt="this is a seat images">
                 </div>
                 <div>
-                  <p><span>40 </span>Seats left</p>
+                  <p><span id="seatCounter">40</span> Seats left</p>
                 </div>
               </div>
             </div>
@@ -218,7 +218,7 @@
           <p class="flex gap-1 items-center"><img src="images/seat-green-filled.png" alt="this is filled icon of seat"> <span>Selected</span></p>
         </div>
 
-        <div class="mt-4 grid grid-cols-10 gap-y-2 lg:gap-y-4">
+        <div class="mt-4 grid grid-cols-10 gap-y-2 lg:gap-y-4" id="seatContainer">
           <div class="col-start-9 col-span-2 bg-gray-300 rounded-xl flex justify-center px-4 lg:px-12 justify-self-end py-1 lg:py-3 lg:w-fit">
             <img src="images/steering-wheel.png" class="h-8 lg:h-12" alt="this is a icon of steering steering-wheel">
           </div>
@@ -337,7 +337,7 @@
           <div class="flex justify-between items-center border-b-2 border-dashed pb-3">
             <div class="font-bold flex gap-1 items-center">
               <p>Seat</p>
-              <span class="bg-main h-4 w-4 rounded-full flex items-center justify-center">0</span>
+              <span id="selectedSeat" class="bg-main h-4 w-4 rounded-full flex items-center justify-center">0</span>
             </div>
 
             <p class="font-bold">Class</p>
@@ -345,42 +345,40 @@
             <p class="font-bold">Price</p>
           </div>
 
-          <div class="pt-4 hidden">
+          <div id="defaultText" class="pt-4">
             <p class="text-red-500 font-medium">You didn't selected any seat</p>
           </div>
 
-          <div class="">
-            <div class="flex flex-col gap-y-3 py-4 border-b-2 border-gray-400">
-              <div class="flex justify-between items-center">
-                <p>C2</p>
-                <p>Economy</p>
-                <p>550</p>
-              </div>
-              <div class="flex justify-between items-center">
-                <p>C2</p>
-                <p>Economy</p>
-                <p>550</p>
-              </div>
+          <div>
+            <div id="seatStates" class="flex flex-col gap-y-3 py-4 border-b-2 border-gray-400">
+              
             </div>
             <div class="flex justify-between mt-2">
               <h3 class="font-bold">Total Price</h3>
               <h3 class="font-bold flex gap-1 items-center">
-                <span>BDT</span>
-                <span>*****</span>
+                <span>BDT:</span>
+                <span id="ticketPrice">*****</span>
               </h3>
             </div>
           </div>
 
           <div class="mt-4 relative">
-            <input type="text" class="input w-full py-7" placeholder="Have any coupon?">
+            <input id="couponInput" type="text" disabled class="input border border-main w-full py-7" placeholder="Have any coupon?">
             <div class="absolute top-1/2 right-1 -transform -translate-y-1/2">
-              <button class="btn bg-main text-white">Apply</button>
+              <button id="couponBtn" disabled class="btn bg-main text-white">Apply</button>
             </div>
-          </div>
 
+          </div>
+          <p id="couponError" class="text-red-500 mt-4 hidden">Coupon code doesn't mathed</p>
+          <p id="couponInvalid" class="text-red-500 mt-4 hidden">Give a valid input</p>
+
+          <div id="discountContainer" class="hidden justify-between py-4 border-y-2 border-dashed">
+            <h3 class="font-bold">Discount</h3>
+            <h3 id="discountPrice" class="font-bold">*****</h3>
+          </div>
           <div class="mt-4 flex justify-between">
             <h3 class="font-bold">Grand Total</h3>
-            <h3 class="font-bold">*****</h3>
+            <h3 id="grandTotal" class="font-bold">*****</h3>
           </div>
 
         </div>
@@ -414,5 +412,7 @@
      </div>
     </section>
   </main>
+
+  <script src="script/script.js"></script>
 </body>
 </html>
